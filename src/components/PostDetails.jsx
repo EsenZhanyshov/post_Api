@@ -10,12 +10,14 @@ const PostDetails = () => {
   }, []);
   console.log(user);
   return (
-    <div>
+    <div className="d">
       <Link className="link" to={"/"}>
         <h1>Users /</h1>
       </Link>
       {user.map((elem) => (
-        <h1 key={elem.id}>{elem.title}</h1>
+        <h1 className="title" key={elem.id}>
+          {elem.title}
+        </h1>
       ))}
     </div>
   );
