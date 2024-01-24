@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: black;
 }
 
 code {
@@ -22,12 +23,12 @@ nav {
   text-decoration: none;
 }
 .link {
-  color: #222;
+  color: #fff;
   text-decoration: none;
 }
 .list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-top: 50px;
 }
@@ -38,10 +39,10 @@ nav {
   padding: 20px;
 }
 .item h3 {
-  color: #222;
+  color: #fff;
 }
 .item h5 {
-  color: #222;
+  color: white;
 }
 .home {
   display: flex;
@@ -63,6 +64,6 @@ nav {
   height: 30px;
   border: 0;
   font-size: 15px;
-  background: #333;
+  background: red;
   color: #fff;
 }

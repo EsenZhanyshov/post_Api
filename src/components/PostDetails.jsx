@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { postContext2 } from "../context/PostContext";
 
 const PostDetails = () => {
-  const { user, getOnePost } = useContext(postContext2);
+  const { users, user, getOnePost } = useContext(postContext2);
   const { id } = useParams();
   useEffect(() => {
     getOnePost(id);
@@ -14,11 +14,13 @@ const PostDetails = () => {
       <Link className="link" to={"/"}>
         <h1>Users /</h1>
       </Link>
-      {user.map((elem) => (
+      {/* {user.map((elem) => (
         <h1 className="title" key={elem.id}>
           {elem.title}
         </h1>
-      ))}
+      ))} */}
+      {Array.isArray(user) &&
+        user.map((elem) => <h3 key={elem.id}>{elem.title}</h3>)}
     </div>
   );
 };
